@@ -31,12 +31,11 @@ int print_signed_num(int num)
 
 /**
  * print_num - Prints a number
- * @format: Format to print number
  * @args: number to print
  *
  * Return: Number of printed numbers
  */
-int print_num(char __attribute__((unused)) *format, va_list args)
+int print_num(va_list args)
 {
 	int number = va_arg(args, int);
 	int count;

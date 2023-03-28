@@ -8,13 +8,11 @@
  */
 int _printf(const char *format, ...)
 {
-	char specifier[3];
-	int num_output = 0, (*print_func)(char *, va_list);
+	int num_output = 0, (*print_func)(va_list);
 	va_list args;
 
 	if (format == NULL)
 		return (-1);
-	specifier[2] = '\0';
 	_putchar(-1);
 	va_start(args, format);
 	while (format[0])
@@ -24,9 +22,7 @@ int _printf(const char *format, ...)
 			print_func = get_print_func(format);
 			if (print_func)
 			{
-				specifier[0] = '%';
-				specifier[1] = format[1];
-				num_output += print_func(specifier, args);
+				num_output += print_func(args);
 			}
 			else if (format[1] != '\0')
 			{

@@ -14,17 +14,17 @@
 typedef struct print_function
 {
 	char *specifier;
-	int (*function)(char *format, va_list);
+	int (*function)(va_list);
 } print_func;
 
 int _printf(const char *format, ...);
 int _putchar(char ch);
 int _puts(char *s);
 int count_digits(int num);
-int print_char(char *format, va_list);
-int print_string(char *format, va_list);
-int print_percent(char *format, va_list);
-int print_num(char *format, va_list);
-int (*get_print_func(const char *format))(char *format, va_list);
+int print_char(va_list);
+int print_string(va_list);
+int print_percent(va_list);
+int print_num(va_list);
+int (*get_print_func(const char *format))(va_list);
 
 #endif

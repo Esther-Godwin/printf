@@ -6,7 +6,7 @@
  *
  * Return: Pointer to the print function
  */
-int (*get_print_func(const char *format))(char *format, va_list)
+int (*get_print_func(const char *format))(va_list)
 {
 	int i;
 
