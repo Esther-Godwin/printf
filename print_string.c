@@ -13,7 +13,7 @@ int print_string(char __attribute__((unused)) *format, va_list args)
 	int count;
 
 	if (s == NULL)
-		s = "(null)";
+		return (0);
 	count = _puts(s);
 	return (count);
 }
