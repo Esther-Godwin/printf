@@ -6,7 +6,7 @@
  *
  * Return: Numbers of characters printed
  */
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
 	char specifier[3];
 	int num_output = 0, (*print_func)(char *, va_list);
